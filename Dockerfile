@@ -24,11 +24,11 @@ COPY . .
 RUN npm run build
 
 # Expose port
-EXPOSE 8005
+EXPOSE 8012
 
 # Add healthcheck
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:8012/ || exit 1
 
 # Start the preview server
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "8005"]
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "8012"]
