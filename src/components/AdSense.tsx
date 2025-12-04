@@ -1,9 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 interface AdSenseProps {
-  adSlot: string;
-  adFormat?: "auto" | "fluid" | "rectangle" | "horizontal" | "vertical";
-  fullWidthResponsive?: boolean;
   className?: string;
 }
 
@@ -13,22 +10,11 @@ declare global {
   }
 }
 
-export function AdSense({ 
-  adSlot, 
-  adFormat = "auto", 
-  fullWidthResponsive = true,
-  className = ""
-}: AdSenseProps) {
-  const adRef = useRef<HTMLModElement>(null);
-  const isLoaded = useRef(false);
-
+export function AdSense({ className = "" }: AdSenseProps) {
   useEffect(() => {
-    if (isLoaded.current) return;
-    
     try {
-      if (typeof window !== "undefined" && adRef.current) {
+      if (typeof window !== "undefined") {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
-        isLoaded.current = true;
       }
     } catch (error) {
       console.error("AdSense error:", error);
@@ -36,16 +22,27 @@ export function AdSense({
   }, []);
 
   return (
-    <div className={`ad-container ${className}`}>
-      <ins
-        ref={adRef}
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-2820378422214826"
-        data-ad-slot={adSlot}
-        data-ad-format={adFormat}
-        data-full-width-responsive={fullWidthResponsive.toString()}
-      />
-    </div>
+    <>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2820378422214826"
+        crossOrigin="anonymous"
+      ></script>
+      <div className={`ad-container ${className}`}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-format="fluid"
+          data-ad-layout-key="-fb+5w+4e-db+86"
+          data-ad-client="ca-pub-2820378422214826"
+          data-ad-slot="1094302811"
+        ></ins>
+      </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: "(adsbygoogle = window.adsbygoogle || []).push({});",
+        }}
+      ></script>
+    </>
   );
 }
