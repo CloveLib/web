@@ -1,0 +1,31 @@
+# Most updated version of Dependabot
+version: 2
+updates:
+
+# ================================
+# GitHub Actions
+# ================================
+
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "daily"
+      time: "08:00"
+    assignees:
+      - "CloveTwilight3"
+    labels:
+      - "Dependabot"
+
+# ================================
+# Trans4Trans Letters
+# ================================
+
+  - package-ecosystem: "npm"
+    directory: "."
+    schedule:
+      interval: "daily"
+      time: "09:30"
+    assignees:
+      - "CloveTwilight3"
+    labels:
+      - "Dependabot"
