@@ -6,15 +6,8 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-    host: "0.0.0.0",
-    port: 8012,
-    allowedHosts: ['localhost', '127.0.0.1', 'www.clovelib.win', 'clovelib.win'],
-  },
-  preview: {
-    host: "0.0.0.0",
-    port: 8012,
-    strictPort: true,
-    allowedHosts: ['localhost', '127.0.0.1', 'www.clovelib.win', 'clovelib.win'],
+    host: "::",
+    port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
@@ -22,13 +15,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    minify: true,
-    sourcemap: false,
-  },
-  optimizeDeps: {
-    include: ['react-router-dom']
-  }
 }));

@@ -1,126 +1,119 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=DM+Sans:wght@400;500;600&display=swap');
 
-@theme {
-  --font-sans: "DM Sans", system-ui, sans-serif;
-  --font-display: "Nova Round", system-ui, sans-serif;
-  
-  --color-background: 190 53% 61%;
-  --color-foreground: 0 0% 15%;
-  
-  --color-card: 0 0% 100% / 0.9;
-  --color-card-foreground: 0 0% 15%;
-  
-  --color-popover: 0 0% 100% / 0.95;
-  --color-popover-foreground: 0 0% 15%;
-  
-  --color-primary: 0 42% 57%;
-  --color-primary-foreground: 0 0% 100%;
-  
-  --color-secondary: 190 40% 50%;
-  --color-secondary-foreground: 0 0% 100%;
-  
-  --color-muted: 190 30% 85%;
-  --color-muted-foreground: 0 0% 35%;
-  
-  --color-accent: 50 82% 70%;
-  --color-accent-foreground: 0 0% 15%;
-  
-  --color-destructive: 0 65% 55%;
-  --color-destructive-foreground: 0 0% 100%;
-  
-  --color-border: 190 30% 50% / 0.3;
-  --color-input: 190 30% 50% / 0.3;
-  --color-ring: 0 42% 57%;
-  
-  --radius: 0.75rem;
-  --radius-lg: 0.75rem;
-  --radius-md: calc(0.75rem - 2px);
-  --radius-sm: calc(0.75rem - 4px);
-  
-  /* Sidebar colors */
-  --color-sidebar-background: 0 0% 100% / 0.9;
-  --color-sidebar-foreground: 0 0% 15%;
-  --color-sidebar-primary: 0 42% 57%;
-  --color-sidebar-primary-foreground: 0 0% 100%;
-  --color-sidebar-accent: 190 40% 50%;
-  --color-sidebar-accent-foreground: 0 0% 100%;
-  --color-sidebar-border: 190 30% 50% / 0.3;
-  --color-sidebar-ring: 0 42% 57%;
-}
-
 @layer base {
   :root {
+    --background: 190 53% 61%;
     --background-gradient: linear-gradient(90deg, hsl(190 53% 61%) 0%, hsl(50 82% 70%) 100%);
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100% / 0.9;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100% / 0.95;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 42% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 40% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 190 30% 85%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 50 82% 70%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 190 30% 50% / 0.3;
+    --input: 190 30% 50% / 0.3;
+    --ring: 0 42% 57%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
     --gradient-hero: linear-gradient(135deg, hsl(190 53% 61% / 0.2) 0%, hsl(50 82% 70% / 0.2) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 98% / 0.85) 100%);
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.15);
     --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.12);
     --shadow-hover: 0 12px 40px -12px hsl(0 42% 57% / 0.3);
+
+    --sidebar-background: 0 0% 100% / 0.9;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 42% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 190 40% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 190 30% 50% / 0.3;
+    --sidebar-ring: 0 42% 57%;
   }
 
   .dark {
-    --color-background: 220 20% 10%;
-    --color-foreground: 210 20% 92%;
-    
-    --color-card: 220 18% 14%;
-    --color-card-foreground: 210 20% 92%;
-    
-    --color-popover: 220 18% 14%;
-    --color-popover-foreground: 210 20% 92%;
-    
-    --color-primary: 0 42% 57%;
-    --color-primary-foreground: 0 0% 100%;
-    
-    --color-secondary: 190 40% 35%;
-    --color-secondary-foreground: 210 20% 92%;
-    
-    --color-muted: 220 15% 18%;
-    --color-muted-foreground: 210 15% 60%;
-    
-    --color-accent: 50 60% 50%;
-    --color-accent-foreground: 220 20% 10%;
-    
-    --color-destructive: 0 65% 55%;
-    --color-destructive-foreground: 0 0% 100%;
-    
-    --color-border: 220 15% 25%;
-    --color-input: 220 15% 25%;
-    --color-ring: 0 42% 57%;
-    
-    --color-sidebar-background: 220 20% 10%;
-    --color-sidebar-foreground: 210 20% 92%;
-    --color-sidebar-primary: 0 42% 57%;
-    --color-sidebar-primary-foreground: 0 0% 100%;
-    --color-sidebar-accent: 220 15% 20%;
-    --color-sidebar-accent-foreground: 210 20% 92%;
-    --color-sidebar-border: 220 15% 25%;
-    --color-sidebar-ring: 0 42% 57%;
-
+    --background: 220 20% 10%;
     --background-gradient: linear-gradient(90deg, hsl(190 40% 25%) 0%, hsl(50 50% 35%) 100%);
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 0 42% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 40% 35%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 50 60% 50%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 0 42% 57%;
+
     --gradient-hero: linear-gradient(135deg, hsl(190 40% 35% / 0.2) 0%, hsl(50 60% 50% / 0.2) 100%);
     --gradient-card: linear-gradient(180deg, hsl(220 18% 14%) 0%, hsl(220 20% 12%) 100%);
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
     --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.5);
     --shadow-hover: 0 12px 40px -12px hsl(0 42% 57% / 0.3);
-  }
 
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 0 42% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 20%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 0 42% 57%;
+  }
+}
+
+@layer base {
   * {
-    border-color: hsl(var(--color-border));
+    @apply border-border;
   }
 
   body {
-    color: hsl(var(--color-foreground));
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply text-foreground font-sans antialiased;
     background: var(--background-gradient);
     min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    @apply font-display;
   }
 }
 
@@ -143,13 +136,5 @@
 
   .shadow-hover {
     box-shadow: var(--shadow-hover);
-  }
-  
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-  
-  .font-display {
-    font-family: var(--font-display);
   }
 }
