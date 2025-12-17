@@ -41,9 +41,10 @@ export function AdSense({
         ref={adRef}
         className="adsbygoogle"
         style={{ display: "block" }}
+        data-ad-layout-key="-fb+5w+4e-db+86"
         data-ad-client="ca-pub-2820378422214826"
-        data-ad-slot={adSlot}
-        data-ad-format={adFormat}
+        data-ad-slot="1094302811"
+        data-ad-format="fluid"
         data-full-width-responsive={fullWidthResponsive.toString()}
       />
     </div>
