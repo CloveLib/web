@@ -39,13 +39,13 @@ export function PluginCard({
         delay: index * 0.1,
       }}
       className={cn(
-        "group relative overflow-hidden rounded-xl border border-border/50 gradient-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-hover"
+        "group relative overflow-hidden rounded-xl border border-border/50 gradient-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-hover flex flex-col h-full"
       )}
     >
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      <div className="relative">
+      <div className="relative flex flex-col h-full">
         {/* Icon and version */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
@@ -56,21 +56,23 @@ export function PluginCard({
           </span>
         </div>
 
-        {/* Name and description */}
-        <h3 className="font-display text-lg font-semibold mb-1">
-          {name}
-          {shortName && (
-            <span className="text-sm font-normal text-muted-foreground ml-2">
-              ({shortName})
-            </span>
-          )}
-        </h3>
-        <p className="text-sm text-muted-foreground mb-6 line-clamp-2">
-          {description}
-        </p>
+        {/* Name and description - flex-grow to push buttons to bottom */}
+        <div className="flex-grow mb-6">
+          <h3 className="font-display text-lg font-semibold mb-1">
+            {name}
+            {shortName && (
+              <span className="text-sm font-normal text-muted-foreground ml-2">
+                ({shortName})
+              </span>
+            )}
+          </h3>
+          <p className="text-sm text-muted-foreground line-clamp-3">
+            {description}
+          </p>
+        </div>
 
-        {/* Buttons */}
-        <div className="flex gap-2">
+        {/* Buttons - at the bottom */}
+        <div className="flex gap-2 mt-auto">
           <Button variant="outline" size="sm" className="flex-1" asChild>
             <Link to={docsUrl || "#"}>
               <BookOpen className="h-4 w-4" />

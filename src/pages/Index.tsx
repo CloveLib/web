@@ -13,7 +13,6 @@ import {
   Trophy,
   ArrowRight,
 } from "lucide-react";
-import { Description } from "@radix-ui/react-toast";
 
 const minecraftPlugins = [
   {
@@ -85,7 +84,7 @@ const hytalePlugins = [
     orbisUrl: "https://www.orbis.place/plugin/cpt",
     shortName: "CPT"
   }
-]
+];
 
 const Index = () => {
   usePageTitle("CloveLib - Home");
@@ -141,24 +140,38 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {minecraftPlugins.map((plugin, index) => (
-            <PluginCard
-              key={plugin.name}
-              {...plugin}
-              index={index}
-            />
-          ))}
+        {/* Minecraft Plugins Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-display font-semibold mb-8 text-center">
+            Minecraft Plugins
+          </h3>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {minecraftPlugins.map((plugin, index) => (
+              <PluginCard
+                key={plugin.name}
+                {...plugin}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols2 gap-6">
-          {hytalePlugins.map((plugin, index) =>(
-            <PluginCard
-              key={plugin.name}
-              {...plugin}
-              index={index}
-            />
-          ))}
+        {/* Hytale Plugins Section */}
+        <div>
+          <h3 className="text-2xl md:text-3xl font-display font-semibold mb-8 text-center">
+            Hytale Plugins
+          </h3>
+          <div className="max-w-7xl mx-auto flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+              {hytalePlugins.map((plugin, index) => (
+                <PluginCard
+                  key={plugin.name}
+                  {...plugin}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

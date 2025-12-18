@@ -23,7 +23,7 @@ import StatsEndDocs from "@/pages/docs/StatsEndDocs";
 import EndRaceDocs from "@/pages/docs/EndRaceDocs";
 
 // Hytale Docs
-// import CPTDocs from '@/pages/docs/CPTDocs';
+import CPTDocs from '@/pages/docs/CPTDocs';
 
 const queryClient = new QueryClient();
 
@@ -45,6 +45,7 @@ const App = () => (
           <Route path="/docs/cpc" element={<CPCDocs />} />
           <Route path="/docs/statsend" element={<StatsEndDocs />} />
           <Route path="/docs/endrace" element={<EndRaceDocs />} />
+          <Route path="/docs/cpt" element={<CPTDocs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
