@@ -1,7 +1,7 @@
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import { AdSense } from "./AdSense";
-import { PageTransition } from "./PageTransition";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { AdSense } from "@/components/AdSense";
+import { PageTransition } from "@/components/PageTransition";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export function Layout({ children }: LayoutProps) {
       {/* Ad before footer */}
       <div className="container py-8">
         <AdSense 
-          adSlot="XXXXXXXXXX" 
+          adSlot="1094302811" 
           adFormat="horizontal"
           className="max-w-4xl mx-auto"
         />

@@ -13,8 +13,9 @@ import {
   Trophy,
   ArrowRight,
 } from "lucide-react";
+import { Description } from "@radix-ui/react-toast";
 
-const plugins = [
+const minecraftPlugins = [
   {
     name: "CloveLib",
     description: "Core library providing essential utilities used across all Clove plugins.",
@@ -74,6 +75,18 @@ const plugins = [
   },
 ];
 
+const hytalePlugins = [
+  {
+    name: "ClovePluralTale",
+    description: "Plural system support for Hytale servers, enabling identity management for plural users.",
+    icon: <Users className="h-6 w-6" />,
+    version: "1.0.0 BETA",
+    docsUrl: "/docs/cpt",
+    orbisUrl: "https://www.orbis.place/plugin/cpt",
+    shortName: "CPT"
+  }
+]
+
 const Index = () => {
   usePageTitle("CloveLib - Home");
   
@@ -111,7 +124,7 @@ const Index = () => {
       {/* Ad after hero */}
       <div className="container py-8">
         <AdSense 
-          adSlot="YYYYYYYYYY" 
+          adSlot="1094302811" 
           adFormat="horizontal"
           className="max-w-4xl mx-auto"
         />
@@ -129,7 +142,17 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {plugins.map((plugin, index) => (
+          {minecraftPlugins.map((plugin, index) => (
+            <PluginCard
+              key={plugin.name}
+              {...plugin}
+              index={index}
+            />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols2 gap-6">
+          {hytalePlugins.map((plugin, index) =>(
             <PluginCard
               key={plugin.name}
               {...plugin}

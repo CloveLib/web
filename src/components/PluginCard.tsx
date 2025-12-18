@@ -11,6 +11,7 @@ interface PluginCardProps {
   version: string;
   docsUrl?: string;
   modrinthUrl?: string;
+  orbisUrl?: string;
   shortName?: string;
   index?: number;
 }
@@ -22,6 +23,7 @@ export function PluginCard({
   version,
   docsUrl,
   modrinthUrl,
+  orbisUrl,
   shortName,
   index = 0,
 }: PluginCardProps) {
@@ -78,6 +80,14 @@ export function PluginCard({
           {modrinthUrl && (
             <Button variant="hero" size="sm" className="flex-1" asChild>
               <a href={modrinthUrl} target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4" />
+                Download
+              </a>
+            </Button>
+          )}
+          {orbisUrl && (
+            <Button variant="hero" size="sm" className="flex-1" asChild>
+              <a href={orbisUrl} target="_blank" rel="noopener noreferrer">
                 <Download className="h-4 w-4" />
                 Download
               </a>

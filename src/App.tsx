@@ -1,21 +1,29 @@
+// General Imports
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Support from "./pages/Support";
-import Terms from "./pages/Terms";
-import Privacy from "./pages/Privacy";
-import NotFound from "./pages/NotFound";
-import CloveLibDocs from "./pages/docs/CloveLibDocs";
-import EstrocordDocs from "./pages/docs/EstrocordDocs";
-import JailedWingsDocs from "./pages/docs/JailedWingsDocs";
-import WingSyncDocs from "./pages/docs/WingSyncDocs";
-import CPCDocs from "./pages/docs/CPCDocs";
-import StatsEndDocs from "./pages/docs/StatsEndDocs";
-import EndRaceDocs from "./pages/docs/EndRaceDocs";
-import { CookieConsent } from "./components/CookieConsent";
+import { CookieConsent } from "@/components/CookieConsent";
+
+// General Pages
+import Index from "@/pages/Index";
+import Support from "@/pages/Support";
+import Terms from "@/pages/Terms";
+import Privacy from "@/pages/Privacy";
+import NotFound from "@/pages/NotFound";
+
+// Minecraft Docs
+import CloveLibDocs from "@/pages/docs/CloveLibDocs";
+import EstrocordDocs from "@/pages/docs/EstrocordDocs";
+import JailedWingsDocs from "@/pages/docs/JailedWingsDocs";
+import WingSyncDocs from "@/pages/docs/WingSyncDocs";
+import CPCDocs from "@/pages/docs/CPCDocs";
+import StatsEndDocs from "@/pages/docs/StatsEndDocs";
+import EndRaceDocs from "@/pages/docs/EndRaceDocs";
+
+// Hytale Docs
+// import CPTDocs from '@/pages/docs/CPTDocs';
 
 const queryClient = new QueryClient();
 
