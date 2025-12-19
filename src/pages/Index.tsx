@@ -87,7 +87,7 @@ const hytalePlugins = [
 ];
 
 const Index = () => {
-  usePageTitle("CloveLib - Home");
+  usePageTitle("CloveLib Studios - Home");
   
   return (
     <Layout>
@@ -99,7 +99,7 @@ const Index = () => {
         <div className="container relative py-24 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 opacity-0 animate-fade-in text-primary">
-              CloveLib Documentation
+              CloveLib Studios Documentation
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "100ms" }}>
               Complete documentation and guides for all Clove plugins. 

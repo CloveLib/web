@@ -10,7 +10,7 @@ export function Footer() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Leaf className="h-4 w-4" />
             </div>
-            <span className="font-display text-lg font-semibold">CloveLib</span>
+            <span className="font-display text-lg font-semibold">CloveLib Studios</span>
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
@@ -27,7 +27,7 @@ export function Footer() {
               Privacy Policy
             </Link>
             <a 
-              href="https://github.com/CloveLib/web" 
+              href="https://github.com/CloveLib/Studios" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors inline-flex items-center gap-1"
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Clove Twilight. Licensed under MIT.</p>
+          <p>© {new Date().getFullYear()} Clove Twilight, CloveLib Studios. Licensed under MIT.</p>
         </div>
       </div>
     </footer>

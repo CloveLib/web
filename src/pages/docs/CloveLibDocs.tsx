@@ -53,8 +53,7 @@ const CloveLibDocs = () => {
               that other plugins build upon.
             </p>
             <p className="mt-4">
-              <strong className="text-foreground">Important:</strong> This plugin must be installed 
-              before any other Clove plugin.
+              <strong className="text-foreground">Important:</strong> This plugin must be installed before any other Clove plugin.
             </p>
           </DocSection>
 

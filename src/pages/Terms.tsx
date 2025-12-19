@@ -3,7 +3,7 @@ import { FileText } from "lucide-react";
 import { usePageTitle } from "@/hooks/use-page-title";
 
 const Terms = () => {
-  usePageTitle("CloveLib - Terms of Service");
+  usePageTitle("CloveLib Studios - Terms of Service");
   
   return (
     <Layout>
@@ -19,7 +19,7 @@ const Terms = () => {
             Terms of Service
           </h1>
           <p className="text-muted-foreground opacity-0 animate-fade-in" style={{ animationDelay: "100ms" }}>
-            Last updated: December 4, 2025
+            Last updated: December 19, 2025
           </p>
         </div>
       </section>
@@ -30,14 +30,14 @@ const Terms = () => {
           <div className="rounded-xl border border-border/50 bg-card p-6 md:p-8 opacity-0 animate-fade-in" style={{ animationDelay: "150ms" }}>
             <h2 className="font-display text-xl font-semibold mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground leading-relaxed">
-              By downloading, installing, or using any CloveLib plugins ("Software") or accessing this website, you agree to these Terms of Service. If you do not agree, please do not use the Software or this website.
+              By downloading, installing, or using any CloveLib Studios plugins ("Software") or accessing this website, you agree to these Terms of Service. If you do not agree, please do not use the Software or this website.
             </p>
           </div>
 
           <div className="rounded-xl border border-border/50 bg-card p-6 md:p-8 opacity-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
             <h2 className="font-display text-xl font-semibold mb-4">2. License</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              CloveLib plugins are copyright © Clove Twilight and licensed under the MIT License. This means:
+              CloveLib Studios plugins are copyright © Clove Twilight and licensed under the MIT License. This means:
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>You may use, copy, modify, and distribute the Software</li>
