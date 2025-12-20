@@ -1,6 +1,12 @@
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Users, ArrowLeft } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Users, ArrowLeft, Download, ChevronDown, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -33,6 +39,65 @@ const CPTDocs = () => {
             A plugin for plural users to help proxy their messages in Hytale, 
             allowing system members to communicate with their own identities.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="hero" size="lg">
+                  <Download className="h-4 w-4" />
+                  Download
+                  <ChevronDown className="h-4 w-4 ml-1" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.orbis.place/plugin/clovespluraltale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    Orbis
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.unifiedhytale.com/project/clovespluraltale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    UnifiedHytale
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.modtale.com/plugin/clovespluraltale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    ModTale
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.curseforge.com/hytale/mods/clovespluraltale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    CurseForge
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://api.clovelib.win" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4" />
+                Web Dashboard
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -81,16 +146,26 @@ const CPTDocs = () => {
                 <span className="text-primary mt-1">✓</span>
                 <span>Permissions guide</span>
               </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">✓</span>
+                <span>Web dashboard integration</span>
+              </li>
             </ul>
           </div>
 
           <p className="text-muted-foreground mb-6">
-            In the meantime, check out our other plugin documentation or join our Discord for support.
+            In the meantime, check out our other plugin documentation, use the web dashboard, or join our Discord for support.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
               <Link to="/">Browse Other Plugins</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="https://api.clovelib.win" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4" />
+                Web Dashboard
+              </a>
             </Button>
             <Button variant="outline" asChild>
               <a href="https://discord.gg/k8HrBvDaQn" target="_blank" rel="noopener noreferrer">

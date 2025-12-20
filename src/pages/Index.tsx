@@ -56,7 +56,7 @@ const minecraftPlugins = [
     docsUrl: "/docs/wingsync",
     downloadStores: [
       { name: "Modrinth", url: "https://www.modrinth.com/plugin/wingsync" },
-//      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/wingsync" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/wingsync" },
     ],
   },
   {
@@ -78,8 +78,8 @@ const minecraftPlugins = [
     version: "5.0.0",
     docsUrl: "/docs/statsend",
     downloadStores: [
-//      { name: "Modrinth", url: "https://www.modrinth.com/plugin/statsend" },
-//      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/statsend" },
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/statsend" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/statsend" },
     ],
   },
   {
@@ -89,8 +89,8 @@ const minecraftPlugins = [
     version: "5.0.0",
     docsUrl: "/docs/endrace",
     downloadStores: [
-//      { name: "Modrinth", url: "https://www.modrinth.com/plugin/endrace" },
-//      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/endrace" },
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/endrace" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/endrace" },
     ],
   },
 ];
@@ -105,8 +105,8 @@ const hytalePlugins = [
     downloadStores: [
       { name: "Orbis", url: "https://www.orbis.place/plugin/clovespluraltale" },
       { name: "UnifiedHytale", url: "https://www.unifiedhytale.com/project/clovespluraltale" },
-//      { name: "ModTale", url: "https://www.modtale.com/plugin/clovespluraltale" },
-//      { name: "CurseForge", url: "https://www.curseforge.com/hytale/mods/clovespluraltale" },
+      { name: "ModTale", url: "https://www.modtale.com/plugin/clovespluraltale" },
+      { name: "CurseForge", url: "https://www.curseforge.com/hytale/mods/clovespluraltale" },
     ],
     shortName: "CPT"
   }

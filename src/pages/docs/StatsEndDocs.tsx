@@ -1,7 +1,13 @@
 import { Layout } from "@/components/Layout";
 import { DocSection, Command } from "@/components/DocSection";
 import { Button } from "@/components/ui/button";
-import { BarChart3, ArrowLeft, Download } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { BarChart3, ArrowLeft, Download, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -34,12 +40,37 @@ const StatsEndDocs = () => {
             A Minecraft Paper plugin for tracking dragon event achievements and rewarding 
             players for their End dimension accomplishments.
           </p>
-          <Button variant="hero" asChild>
-            <a href="https://www.modrinth.com/plugin/statsend" target="_blank" rel="noopener noreferrer">
-              <Download className="h-4 w-4" />
-              Download on Modrinth
-            </a>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="hero" size="lg">
+                <Download className="h-4 w-4" />
+                Download
+                <ChevronDown className="h-4 w-4 ml-1" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <a
+                  href="https://www.modrinth.com/plugin/statsend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  Modrinth
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a
+                  href="https://www.curseforge.com/minecraft/mc-mods/statsend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  CurseForge
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </section>
 

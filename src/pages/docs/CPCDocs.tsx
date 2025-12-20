@@ -1,7 +1,13 @@
 import { Layout } from "@/components/Layout";
 import { DocSection, Command } from "@/components/DocSection";
 import { Button } from "@/components/ui/button";
-import { Users, ArrowLeft, Download } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Users, ArrowLeft, Download, ChevronDown, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -34,12 +40,45 @@ const CPCDocs = () => {
             A plugin for plural users to help proxy their messages in Minecraft, 
             allowing system members to communicate with their own identities.
           </p>
-          <Button variant="hero" asChild>
-            <a href="https://www.modrinth.com/plugin/cpc" target="_blank" rel="noopener noreferrer">
-              <Download className="h-4 w-4" />
-              Download on Modrinth
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="hero" size="lg">
+                  <Download className="h-4 w-4" />
+                  Download
+                  <ChevronDown className="h-4 w-4 ml-1" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.modrinth.com/plugin/cpc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    Modrinth
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.curseforge.com/minecraft/bukkit-plugins/cpc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    CurseForge
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://api.clovelib.win" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4" />
+                Web Dashboard
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -60,6 +99,7 @@ const CPCDocs = () => {
               <li>Proxy messages as different system members</li>
               <li>Easy front management</li>
               <li>Simple command-based interface</li>
+              <li>Web dashboard for easy management</li>
               <li>No configuration required</li>
             </ul>
           </DocSection>
@@ -70,6 +110,7 @@ const CPCDocs = () => {
               <li>Place in <code className="bg-muted px-1 rounded">plugins</code> folder</li>
               <li>Restart your server</li>
               <li>Players can start using commands immediately</li>
+              <li>Optionally, use the <a href="https://api.clovelib.win" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">web dashboard</a> for easier management</li>
             </ol>
           </DocSection>
 

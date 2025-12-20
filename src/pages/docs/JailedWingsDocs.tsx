@@ -1,7 +1,13 @@
 import { Layout } from "@/components/Layout";
 import { DocSection, CodeBlock, Command } from "@/components/DocSection";
 import { Button } from "@/components/ui/button";
-import { Lock, ArrowLeft, Download } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Lock, ArrowLeft, Download, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -34,12 +40,37 @@ const JailedWingsDocs = () => {
             A simple and lightweight jail plugin for Minecraft servers with 
             easy-to-use commands and configurable jail/unjail locations.
           </p>
-          <Button variant="hero" asChild>
-            <a href="https://www.modrinth.com/plugin/jailedwings" target="_blank" rel="noopener noreferrer">
-              <Download className="h-4 w-4" />
-              Download on Modrinth
-            </a>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="hero" size="lg">
+                <Download className="h-4 w-4" />
+                Download
+                <ChevronDown className="h-4 w-4 ml-1" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <a
+                  href="https://www.modrinth.com/plugin/jailedwings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  Modrinth
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a
+                  href="https://www.curseforge.com/minecraft/bukkit-plugins/jailedwinds"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  CurseForge
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </section>
 
