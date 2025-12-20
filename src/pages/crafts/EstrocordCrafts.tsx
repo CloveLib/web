@@ -181,7 +181,7 @@ const EstrocordCrafts = () => {
               >
                 <div className="aspect-square bg-muted/30 flex items-center justify-center p-4">
                   <img
-                    src={`/src/pages/crafts/assets/${mob}_craft.png`}
+                    src={`/assets/${mob}_craft.png`}
                     alt={`${formatMobName(mob)} craft recipe`}
                     className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
