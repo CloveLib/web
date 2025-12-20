@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Leaf, Github } from "lucide-react";
+import { MemoryStick, Github } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Leaf className="h-4 w-4" />
+              <MemoryStick className="h-4 w-4" />
             </div>
             <span className="font-display text-lg font-semibold">CloveLib Studios</span>
           </div>

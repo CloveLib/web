@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { FileText } from "lucide-react";
+import { ScrollText } from "lucide-react";
 import { usePageTitle } from "@/hooks/use-page-title";
 
 const Terms = () => {
@@ -12,7 +12,7 @@ const Terms = () => {
         <div className="container py-16 md:py-20 text-center">
           <div className="flex justify-center mb-6">
             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-              <FileText className="h-8 w-8" />
+              <ScrollText className="h-8 w-8" />
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 opacity-0 animate-fade-in">

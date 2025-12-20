@@ -44,7 +44,7 @@ const Privacy = () => {
               <li><strong>Update Checks:</strong> Plugin version checks to notify you of updates</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Both of these can be disabled in the configuration files.
+              bStats can be disabled in the configuration file.
             </p>
           </div>
 

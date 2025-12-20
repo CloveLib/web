@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { BookOpen, Download } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { BookOpen, Download, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
+export interface DownloadStore {
+  name: string;
+  url: string;
+}
 
 interface PluginCardProps {
   name: string;
@@ -10,8 +21,7 @@ interface PluginCardProps {
   icon: React.ReactNode;
   version: string;
   docsUrl?: string;
-  modrinthUrl?: string;
-  orbisUrl?: string;
+  downloadStores?: DownloadStore[];
   shortName?: string;
   index?: number;
 }
@@ -22,8 +32,7 @@ export function PluginCard({
   icon,
   version,
   docsUrl,
-  modrinthUrl,
-  orbisUrl,
+  downloadStores = [],
   shortName,
   index = 0,
 }: PluginCardProps) {
@@ -79,21 +88,41 @@ export function PluginCard({
               Docs
             </Link>
           </Button>
-          {modrinthUrl && (
-            <Button variant="hero" size="sm" className="flex-1" asChild>
-              <a href={modrinthUrl} target="_blank" rel="noopener noreferrer">
-                <Download className="h-4 w-4" />
-                Download
-              </a>
-            </Button>
-          )}
-          {orbisUrl && (
-            <Button variant="hero" size="sm" className="flex-1" asChild>
-              <a href={orbisUrl} target="_blank" rel="noopener noreferrer">
-                <Download className="h-4 w-4" />
-                Download
-              </a>
-            </Button>
+          {downloadStores.length > 0 && (
+            <>
+              {downloadStores.length === 1 ? (
+                <Button variant="hero" size="sm" className="flex-1" asChild>
+                  <a href={downloadStores[0].url} target="_blank" rel="noopener noreferrer">
+                    <Download className="h-4 w-4" />
+                    Download
+                  </a>
+                </Button>
+              ) : (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="hero" size="sm" className="flex-1">
+                      <Download className="h-4 w-4" />
+                      Download
+                      <ChevronDown className="h-4 w-4 ml-1" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    {downloadStores.map((store) => (
+                      <DropdownMenuItem key={store.name} asChild>
+                        <a
+                          href={store.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cursor-pointer"
+                        >
+                          {store.name}
+                        </a>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              )}
+            </>
           )}
         </div>
       </div>

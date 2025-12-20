@@ -16,12 +16,15 @@ import {
 
 const minecraftPlugins = [
   {
-    name: "CloveLib",
+    name: "CloveLibAPI",
     description: "Core library providing essential utilities used across all Clove plugins.",
     icon: <Library className="h-6 w-6" />,
-    version: "1.0.0",
-    docsUrl: "/docs/clovelib",
-    modrinthUrl: "https://www.modrinth.com/plugin/clovelib",
+    version: "5.0.0",
+    docsUrl: "/docs/clovelibapi",
+    downloadStores: [
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/clovelibapi" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/clovelibapi" },
+    ],
   },
   {
     name: "Estrocord",
@@ -29,48 +32,66 @@ const minecraftPlugins = [
     icon: <Gavel className="h-6 w-6" />,
     version: "5.0.0",
     docsUrl: "/docs/estrocord",
-    modrinthUrl: "https://www.modrinth.com/plugin/estrocord",
+    downloadStores: [
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/estrocord" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/estrocord" },
+    ],
   },
   {
     name: "JailedWings",
     description: "Simple and lightweight jail system with configurable jail and release locations.",
     icon: <Lock className="h-6 w-6" />,
-    version: "1.7",
+    version: "5.0.0",
     docsUrl: "/docs/jailedwings",
-    modrinthUrl: "https://www.modrinth.com/plugin/jailedwings",
+    downloadStores: [
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/jailedwings" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/jailedwinds" },
+    ],
   },
   {
     name: "WingSync",
     description: "Discord to Minecraft whitelist sync, allowing users to whitelist themselves via Discord.",
     icon: <MessageSquare className="h-6 w-6" />,
-    version: "1.0.0",
+    version: "5.0.0",
     docsUrl: "/docs/wingsync",
-    modrinthUrl: "https://www.modrinth.com/plugin/wingsync",
+    downloadStores: [
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/wingsync" },
+//      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/wingsync" },
+    ],
   },
   {
     name: "ClovesPluralCraft",
     description: "Plural system support for Minecraft servers, enabling identity management for plural users.",
     icon: <Users className="h-6 w-6" />,
-    version: "1.0.0",
+    version: "5.0.0",
     docsUrl: "/docs/cpc",
-    modrinthUrl: "https://www.modrinth.com/plugin/cpc",
+    downloadStores: [
+      { name: "Modrinth", url: "https://www.modrinth.com/plugin/cpc" },
+      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/cpc" },
+    ],
     shortName: "CPC",
   },
   {
     name: "StatsEnd",
     description: "Comprehensive End dimension statistics tracking and leaderboards.",
     icon: <BarChart3 className="h-6 w-6" />,
-    version: "1.0.0",
+    version: "5.0.0",
     docsUrl: "/docs/statsend",
-    modrinthUrl: "https://www.modrinth.com/plugin/statsend",
+    downloadStores: [
+//      { name: "Modrinth", url: "https://www.modrinth.com/plugin/statsend" },
+//      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/statsend" },
+    ],
   },
   {
     name: "EndRace",
     description: "Track how long players take to reach the End portal with Eyes of Ender from server join.",
     icon: <Trophy className="h-6 w-6" />,
-    version: "1.0.0",
+    version: "5.0.0",
     docsUrl: "/docs/endrace",
-    modrinthUrl: "https://www.modrinth.com/plugin/endrace",
+    downloadStores: [
+//      { name: "Modrinth", url: "https://www.modrinth.com/plugin/endrace" },
+//      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/endrace" },
+    ],
   },
 ];
 
@@ -81,7 +102,12 @@ const hytalePlugins = [
     icon: <Users className="h-6 w-6" />,
     version: "1.0.0 BETA",
     docsUrl: "/docs/cpt",
-    orbisUrl: "https://www.orbis.place/plugin/clovespluraltale",
+    downloadStores: [
+      { name: "Orbis", url: "https://www.orbis.place/plugin/clovespluraltale" },
+      { name: "UnifiedHytale", url: "https://www.unifiedhytale.com/project/clovespluraltale" },
+//      { name: "ModTale", url: "https://www.modtale.com/plugin/clovespluraltale" },
+//      { name: "CurseForge", url: "https://www.curseforge.com/hytale/mods/clovespluraltale" },
+    ],
     shortName: "CPT"
   }
 ];

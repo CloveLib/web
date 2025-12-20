@@ -14,13 +14,14 @@ import Privacy from "@/pages/Privacy";
 import NotFound from "@/pages/NotFound";
 
 // Minecraft Docs
-import CloveLibDocs from "@/pages/docs/CloveLibDocs";
+import CloveLibAPIDocs from "@/pages/docs/CloveLibAPIDocs";
 import EstrocordDocs from "@/pages/docs/EstrocordDocs";
 import JailedWingsDocs from "@/pages/docs/JailedWingsDocs";
 import WingSyncDocs from "@/pages/docs/WingSyncDocs";
 import CPCDocs from "@/pages/docs/CPCDocs";
 import StatsEndDocs from "@/pages/docs/StatsEndDocs";
 import EndRaceDocs from "@/pages/docs/EndRaceDocs";
+import EstrocordCrafts from "@/pages/crafts/EstrocordCrafts";
 
 // Hytale Docs
 import CPTDocs from '@/pages/docs/CPTDocs';
@@ -38,7 +39,7 @@ const App = () => (
           <Route path="/support" element={<Support />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/docs/clovelib" element={<CloveLibDocs />} />
+          <Route path="/docs/clovelibapi" element={<CloveLibAPIDocs />} />
           <Route path="/docs/estrocord" element={<EstrocordDocs />} />
           <Route path="/docs/jailedwings" element={<JailedWingsDocs />} />
           <Route path="/docs/wingsync" element={<WingSyncDocs />} />
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/docs/statsend" element={<StatsEndDocs />} />
           <Route path="/docs/endrace" element={<EndRaceDocs />} />
           <Route path="/docs/cpt" element={<CPTDocs />} />
+          <Route path="/crafts/estrocord" element={<EstrocordCrafts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />

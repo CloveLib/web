@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { DocSection, CodeBlock, Command } from "@/components/DocSection";
 import { Button } from "@/components/ui/button";
-import { Gavel, ArrowLeft, Download } from "lucide-react";
+import { Gavel, ArrowLeft, Download, SquareArrowOutUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -34,12 +34,20 @@ const EstrocordDocs = () => {
             A comprehensive roleplay and server moderation plugin with vein mining, 
             base management, flight zones, teleportation, and fun social commands.
           </p>
-          <Button variant="hero" asChild>
-            <a href="https://www.modrinth.com/plugin/estrocord" target="_blank" rel="noopener noreferrer">
-              <Download className="h-4 w-4" />
-              Download on Modrinth
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button variant="hero" asChild>
+              <a href="https://www.modrinth.com/plugin/estrocord" target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4" />
+                Download on Modrinth
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="/crafts/estrocord">
+                <SquareArrowOutUpRight className="h-4 w-4" />
+                View Mob Crafts
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 

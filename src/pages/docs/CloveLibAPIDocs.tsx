@@ -5,8 +5,8 @@ import { Library, ArrowLeft, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "@/hooks/use-page-title";
 
-const CloveLibDocs = () => {
-  usePageTitle("CloveLib - Docs");
+const CloveLibAPIDocs = () => {
+  usePageTitle("CloveLibAPI - Docs");
   
   return (
     <Layout>
@@ -26,7 +26,7 @@ const CloveLibDocs = () => {
               <Library className="h-7 w-7" />
             </div>
             <div>
-              <h1 className="text-3xl md:text-4xl font-display font-bold">CloveLib</h1>
+              <h1 className="text-3xl md:text-4xl font-display font-bold">CloveLibAPI</h1>
               <p className="text-muted-foreground">Core Library</p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const CloveLibDocs = () => {
         <div className="max-w-3xl space-y-6">
           <DocSection title="Overview">
             <p>
-              CloveLib is the core dependency required by all other Clove plugins. It provides 
+              CloveLibAPI is the core dependency required by all other Clove plugins. It provides 
               shared utilities, configuration management, database connections, and common APIs 
               that other plugins build upon.
             </p>
@@ -60,7 +60,7 @@ const CloveLibDocs = () => {
 
           <DocSection title="Installation">
             <ol className="list-decimal list-inside space-y-2">
-              <li>Download the latest CloveLib.jar</li>
+              <li>Download the latest CloveLibAPI.jar</li>
               <li>Place it in your server&apos;s <code className="bg-muted px-1 rounded">plugins</code> folder</li>
               <li>Restart your server</li>
             </ol>
@@ -78,4 +78,4 @@ const CloveLibDocs = () => {
   );
 };
 
-export default CloveLibDocs;
+export default CloveLibAPIDocs;
