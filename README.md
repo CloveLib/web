@@ -42,4 +42,5 @@ npm run preview
 
 ## License
 
-MIT © 2025 Clove Twilight | [Docs](https://www.clovelib.win/docs)
+MIT © 2025 Clove Twilight | [Docs](https://www.clovelib.win/docs/studio)
+
