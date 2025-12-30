@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Support", href: "/support" },
   { name: "Terms", href: "/terms" },
   { name: "Privacy", href: "/privacy" },
+  { name: "Licence", href:"/licence" },
 ];
 
 export function Header() {

@@ -12,6 +12,7 @@ import Support from "@/pages/Support";
 import Terms from "@/pages/Terms";
 import Privacy from "@/pages/Privacy";
 import NotFound from "@/pages/NotFound";
+import Licence from "@/pages/Licence";
 
 // Minecraft Docs
 import CloveLibAPIDocs from "@/pages/docs/CloveLibAPIDocs";
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/support" element={<Support />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/licence" element={<Licence />} />
           <Route path="/docs/clovelibapi" element={<CloveLibAPIDocs />} />
           <Route path="/docs/estrocord" element={<EstrocordDocs />} />
           <Route path="/docs/jailedwings" element={<JailedWingsDocs />} />

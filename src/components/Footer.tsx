@@ -39,7 +39,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Clove Twilight, CloveLib Studios. Licensed under MIT.</p>
+          <p>© {new Date().getFullYear()} Clove Twilight, CloveLib Studios. Licensed under The Estrogen Source-Available Licence v1.2.</p>
         </div>
       </div>
     </footer>
