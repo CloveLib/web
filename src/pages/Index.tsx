@@ -105,8 +105,9 @@ const hytalePlugins = [
     downloadStores: [
       { name: "Orbis", url: "https://www.orbis.place/plugin/clovespluraltale" },
       { name: "UnifiedHytale", url: "https://www.unifiedhytale.com/project/clovespluraltale" },
-      { name: "ModTale", url: "https://www.modtale.com/plugin/clovespluraltale" },
+      { name: "ModTale", url: "https://www.modtale.net/plugin/clovespluraltale" },
       { name: "CurseForge", url: "https://www.curseforge.com/hytale/mods/clovespluraltale" },
+      { name: "Picanik", url: "https://www.picanik.gg/mods/61" },
     ],
     shortName: "CPT"
   }
