@@ -13,6 +13,7 @@ import {
   Trophy,
   ArrowRight,
 } from "lucide-react";
+import { version } from "node:os";
 
 const minecraftPlugins = [
   {
@@ -66,32 +67,11 @@ const minecraftPlugins = [
     version: "5.0.0",
     docsUrl: "/docs/cpc",
     downloadStores: [
+      { name: "FancySpaces (reccomended)", url: "https://fancyspaces.net/spaces/cpp"},
       { name: "Modrinth", url: "https://www.modrinth.com/plugin/cpc" },
       { name: "CurseForge", url: "https://www.curseforge.com/minecraft/bukkit-plugins/cpc" },
     ],
     shortName: "CPC",
-  },
-  {
-    name: "StatsEnd",
-    description: "Comprehensive End dimension statistics tracking and leaderboards.",
-    icon: <BarChart3 className="h-6 w-6" />,
-    version: "5.0.0",
-    docsUrl: "/docs/statsend",
-    downloadStores: [
-      { name: "Modrinth", url: "https://www.modrinth.com/plugin/statsend" },
-      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/statsend" },
-    ],
-  },
-  {
-    name: "EndRace",
-    description: "Track how long players take to reach the End portal with Eyes of Ender from server join.",
-    icon: <Trophy className="h-6 w-6" />,
-    version: "5.0.0",
-    docsUrl: "/docs/endrace",
-    downloadStores: [
-      { name: "Modrinth", url: "https://www.modrinth.com/plugin/endrace" },
-      { name: "CurseForge", url: "https://www.curseforge.com/minecraft/mc-mods/endrace" },
-    ],
   },
 ];
 
@@ -103,6 +83,7 @@ const hytalePlugins = [
     version: "1.0.0 BETA",
     docsUrl: "/docs/cpt",
     downloadStores: [
+      { name: "FancySpaces (reccomended)", url: "https://fancyspaces.net/spaces/cpp"},
       { name: "Orbis", url: "https://www.orbis.place/plugin/clovespluraltale" },
       { name: "UnifiedHytale", url: "https://www.unifiedhytale.com/project/clovespluraltale" },
       { name: "ModTale", url: "https://www.modtale.net/plugin/clovespluraltale" },
@@ -110,6 +91,19 @@ const hytalePlugins = [
       { name: "Picanik", url: "https://www.picanik.gg/mods/61" },
     ],
     shortName: "CPT"
+  }
+];
+
+const webApp = [
+  {
+    name: "CloveLibWeb",
+    description: "Web dash for managing plural systems",
+    icon: <Users className="h-6 w-6" />,
+    version: "1.0.0 BETA",
+    downloadStores: [
+      { name: "FancySpaces (reccomended)", url: "https://fancyspaces.net/spaces/cpp"}
+    ],
+    shortName: "CPW"
   }
 ];
 
@@ -200,6 +194,25 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+        {/* Web Apps */}
+        {/*}
+        <div>
+          <h3 className="text-2x1 md:text-3x1 font-display font-demibold mb-8 text-center">
+            Web Apps
+          </h3>
+          <div className="max-w-7x1 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {webApp.map((app, index)  => {
+              <PluginCard
+                key={app.name}
+                {...app}
+                index={index}
+              />
+            })}
+          </div>
+        </div>
+      Commented out until PluginCard is fixed and PRs are dealt with
+      {*/}
       </section>
 
       {/* CTA Section */}
