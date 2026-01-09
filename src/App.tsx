@@ -20,8 +20,6 @@ import EstrocordDocs from "@/pages/docs/EstrocordDocs";
 import JailedWingsDocs from "@/pages/docs/JailedWingsDocs";
 import WingSyncDocs from "@/pages/docs/WingSyncDocs";
 import CPCDocs from "@/pages/docs/CPCDocs";
-import StatsEndDocs from "@/pages/docs/StatsEndDocs";
-import EndRaceDocs from "@/pages/docs/EndRaceDocs";
 import EstrocordCrafts from "@/pages/crafts/EstrocordCrafts";
 
 // Hytale Docs
@@ -46,8 +44,6 @@ const App = () => (
           <Route path="/docs/jailedwings" element={<JailedWingsDocs />} />
           <Route path="/docs/wingsync" element={<WingSyncDocs />} />
           <Route path="/docs/cpc" element={<CPCDocs />} />
-          <Route path="/docs/statsend" element={<StatsEndDocs />} />
-          <Route path="/docs/endrace" element={<EndRaceDocs />} />
           <Route path="/docs/cpt" element={<CPTDocs />} />
           <Route path="/crafts/estrocord" element={<EstrocordCrafts />} />
           <Route path="*" element={<NotFound />} />
