@@ -5,9 +5,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { BookOpen, Download, ChevronDown } from "lucide-react";
+import { Download, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export interface DownloadStore {
@@ -31,7 +30,6 @@ export function PluginCard({
   description,
   icon,
   version,
-  docsUrl,
   downloadStores = [],
   shortName,
   index = 0,
@@ -52,9 +50,9 @@ export function PluginCard({
       )}
     >
       {/* Gradient overlay on hover */}
-      <div className="absolute inset-0 gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0" />
 
-      <div className="relative flex flex-col h-full">
+      <div className="relative flex flex-col h-full z-10">
         {/* Icon and version */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
@@ -80,18 +78,12 @@ export function PluginCard({
           </p>
         </div>
 
-        {/* Buttons - at the bottom */}
+        {/* Download button - at the bottom */}
         <div className="flex gap-2 mt-auto">
-          <Button variant="outline" size="sm" className="flex-1" asChild>
-            <Link to={docsUrl || "#"}>
-              <BookOpen className="h-4 w-4" />
-              Docs
-            </Link>
-          </Button>
           {downloadStores.length > 0 && (
             <>
               {downloadStores.length === 1 ? (
-                <Button variant="hero" size="sm" className="flex-1" asChild>
+                <Button variant="hero" size="sm" className="w-full" asChild>
                   <a href={downloadStores[0].url} target="_blank" rel="noopener noreferrer">
                     <Download className="h-4 w-4" />
                     Download
@@ -100,13 +92,13 @@ export function PluginCard({
               ) : (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="hero" size="sm" className="flex-1">
+                    <Button variant="hero" size="sm" className="w-full">
                       <Download className="h-4 w-4" />
                       Download
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
+                  <DropdownMenuContent align="center">
                     {downloadStores.map((store) => (
                       <DropdownMenuItem key={store.name} asChild>
                         <a
